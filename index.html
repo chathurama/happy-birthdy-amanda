@@ -1,1 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
 
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Happy Birthday Amanda!</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+</head>
+
+<body class="bg-gradient-to-r from-rose-400 to-purple-500 min-h-screen flex items-center justify-center p-4">
+
+    <div class="relative group">
+        <!-- Card Container -->
+        <div
+            class="bg-white rounded-2xl shadow-2xl p-8 max-w-md transform transition-transform duration-500 hover:scale-105">
+            <!-- Floating Hearts Animation -->
+            <div class="absolute -top-10 left-1/2 transform -translate-x-1/2">
+                <div class="animate-bounce text-4xl">
+                    💝 ✨ 💖
+                </div>
+            </div>
+
+            <!-- Card Content -->
+            <div class="text-center space-y-6">
+                <h1
+                    class="text-5xl font-bold bg-gradient-to-r from-purple-600 to-pink-500 text-transparent bg-clip-text mb-4 animate-pulse">
+                    Happy Birthday Amanda!
+                </h1>
+
+                <div class="space-y-4">
+                    <p class="text-gray-600 text-xl leading-relaxed">
+                        Dear Amanda(Sudu Baba),
+                    </p>
+                    <p class="text-gray-600 text-lg leading-relaxed">
+                        🌹 මගේ ආදරණීය සුදු බබා 🌹
+
+                        සඳ එළියේ සිහින් සුවඳක් වගේ
+                        මගේ ජීවිතේට ආ ඔබට
+                        අද මේ සුන්දර දවසේදී
+                        මගේ හදවතින්ම සුබ පතනවා...
+                        
+                        🌸 සුබ උපන්දිනයක් වේවා! 🌸
+                        
+                        ඔබේ හිනැහුම වගේම සුන්දර
+                        හැම දවසක්ම උදා වේවා
+                        මගේ ආදරය නිසාම
+                        ඔබේ ජීවිතේ සදා සතුටින් පිරේවා
+                        
+                        මගේ ලොවේ එකම සිහිනය ඔබයි
+                        මගේ හදවතේ එකම ප්‍රේමය ඔබයි
+                        ඔබ නිසාම මගේ ලෝකේ
+                        සදාකල් සුන්දරයි... ❤️
+                    </p>
+
+                    <!-- Birthday Cake Animation -->
+                    <div class="my-6 flex justify-center space-x-4 text-5xl animate-bounce">
+                        🎂 🎈 🎁
+                    </div>
+
+                    <p class="text-gray-600 italic text-lg">
+                        "Wishing you a day filled with sweet moments and beautiful memories!"
+                    </p>
+                </div>
+
+                <!-- Interactive Elements -->
+                <div class="mt-8 space-y-4">
+                    <button id="confettiBtn" class="bg-gradient-to-r from-pink-400 to-purple-400 text-white px-8 py-4 rounded-full 
+                                   hover:from-purple-400 hover:to-pink-400 transition-all duration-300 
+                                   transform hover:scale-105 focus:outline-none focus:ring-2 focus:ring-purple-400
+                                   text-lg font-semibold">
+                        Click For Birthday Magic! ✨
+                    </button>
+                </div>
+
+                <!-- Birthday Wishes Counter -->
+                <div class="mt-6">
+                    <p class="text-gray-500">
+                        <span id="wishCount">0</span> birthday wishes sent! 🎉
+                    </p>
+                </div>
+
+                <!-- Social Share Buttons -->
+                <div class="flex justify-center space-x-4 mt-6">
+                    <a href="#" class="text-blue-500 hover:text-blue-600 transition-colors">
+                        <i class="fab fa-facebook text-2xl"></i>
+                    </a>
+                    <a href="#" class="text-pink-500 hover:text-pink-600 transition-colors">
+                        <i class="fab fa-instagram text-2xl"></i>
+                    </a>
+                    <a href="#" class="text-blue-400 hover:text-blue-500 transition-colors">
+                        <i class="fab fa-twitter text-2xl"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.4.0/dist/confetti.browser.min.js"></script>
+    <script>
+        let wishes = 0;
+        document.getElementById('confettiBtn').addEventListener('click', () => {
+            // Confetti effect
+            confetti({
+                particleCount: 150,
+                spread: 70,
+                origin: { y: 0.6 },
+                colors: ['#ff69b4', '#9370db', '#ff1493', '#ba55d3']
+            });
+
+            // Update wish counter
+            wishes++;
+            document.getElementById('wishCount').textContent = wishes;
+        });
+    </script>
+</body>
+
+</html>
